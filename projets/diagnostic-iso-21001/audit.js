@@ -39,7 +39,7 @@ const auditGroups=[
 "Attribution de responsables, de délais et de moyens aux objectifs",
 "Planification structurée des changements académiques et organisationnels",
 "Évaluation de l'impact des changements avant leur déploiement"]},
-{chapter:7,first:30,scores:[70,70,30,70,100,30,30,70,70,30,30,70,70],
+{chapter:7,first:30,scores:[70,70,30,70,100,30,30,30,70,70,30,30,70],
  labels:[
 "Disponibilité des ressources humaines nécessaires",
 "Adéquation des salles, laboratoires et équipements",
