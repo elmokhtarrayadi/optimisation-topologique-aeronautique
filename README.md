@@ -1,6 +1,6 @@
 <div align="center">
 
-![Bannière — Optimisation topologique aéronautique](assets/banner.svg)
+![Bannière conceptuelle — Optimisation topologique aéronautique](assets/banner.svg)
 
 # Optimisation topologique d’un composant aéronautique
 
@@ -36,11 +36,35 @@ CATIA V5 · Altair Inspire · PolyNURBS · Ultimaker Cura
 
 > **À lire avec prudence :** ces valeurs sont issues des documents de projet. La masse retenue dans le calcul économique diffère de certaines masses du plan d’expérience Cura. La satisfaction du critère de sécurité n’est pas démontrée ici par un fichier de résultats vérifiable.
 
-## Aperçu visuel
+## Images réelles du projet
 
-![Capture de l'application interactive](https://raw.githubusercontent.com/elmokhtarrayadi21-creator/optimisation-topologique-aeronautique/main/assets/banner.svg)
+Les captures ci-dessous proviennent du travail de conception et de simulation. Il s'agit de **captures CATIA V5 et Altair Inspire**, et non d'illustrations générées pour le portfolio.
 
-La bannière est une **illustration conceptuelle**, pas un modèle CAO. Pour consulter les figures CATIA et Inspire extraites des rapports et les outils interactifs, ouvrir la [démonstration](https://elmokhtarrayadi21-creator.github.io/optimisation-topologique-aeronautique/).
+### 1. Géométrie initiale — CATIA V5
+
+Modèle de départ avec ses trois zones de fixation, avant définition de l'espace de conception et recherche d'allègement.
+
+<p align="center"><img src="assets/volume-initial.jpg" alt="Pièce initiale CATIA V5, plaque percée" width="660"></p>
+
+### 2. Reconstruction de la pièce optimisée — CATIA V5
+
+La capture présente deux représentations d'une géométrie allégée : une forme reconstruite en CAO et une autre géométrie de comparaison. Elle permet de visualiser la répartition de matière obtenue.
+
+<p align="center"><img src="assets/reconstruction-catia.jpg" alt="Comparaison des géométries allégées sous CATIA V5" width="660"></p>
+
+### 3. Intégration de la pièce dans son mécanisme
+
+Positionnement de la pièce et visualisation des interfaces mécaniques dans l'environnement d'assemblage.
+
+<p align="center"><img src="assets/part-in-context.jpg" alt="Pièce allégée dans l'assemblage mécanique" width="660"></p>
+
+### 4. Résultat mécanique — Altair Inspire
+
+Vue du **facteur de sécurité** pour le cas de chargement étudié.
+
+<p align="center"><img src="assets/validation-mecanique.jpg" alt="Résultat Altair Inspire du facteur de sécurité" width="660"></p>
+
+> **Vérification indispensable :** la capture indique un facteur de sécurité minimal d'environ **0,647**, alors que la cible de l'étude est **1,25**. Cette image ne permet donc **pas d'affirmer la validation mécanique complète**. Il faut examiner la zone critique, les conditions aux limites et, si nécessaire, modifier la conception puis relancer le calcul.
 
 ## Démarche technique
 
