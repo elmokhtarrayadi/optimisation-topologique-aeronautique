@@ -15,7 +15,13 @@ CATIA V5 · Altair Inspire · PolyNURBS · Ultimaker Cura
 
 ---
 
-## Le projet en 30 secondes
+## Résumé du projet
+
+Ce projet porte sur la **reconception d'un composant mécanique associé aux portes du train d'atterrissage**, avec pour objectif d'étudier une réduction de masse tout en conservant les zones de fixation et en vérifiant son comportement sous charge. Une géométrie initiale a été modélisée dans **CATIA V5**, puis une optimisation topologique a été menée dans **Altair Inspire**. La forme allégée a été reconstruite à l'aide de **PolyNURBS** et des paramètres de fabrication additive ont été comparés dans **Ultimaker Cura** (12 configurations). Une évaluation technico-économique complète l'étude.
+
+**Résultats à retenir :** masse initiale de **55 g** et masse retenue après reconception de **24 g** (allègement théorique d'environ **56,4 %**) ; chargement étudié de **2 300 N**. **Limite déterminante :** le facteur de sécurité minimal montré par le calcul (**≈ 0,647**) est inférieur à l'objectif (**1,25**). Le résultat constitue donc une **piste d'allègement à fiabiliser**, et non une pièce mécaniquement validée.
+
+## Démarche en 30 secondes
 
 **Problématique.** Comment alléger un composant transmettant l’effort des vérins pneumatiques aux portes du train d’atterrissage, sans perdre ses interfaces fonctionnelles et en tenant compte de la fabrication additive ?
 
