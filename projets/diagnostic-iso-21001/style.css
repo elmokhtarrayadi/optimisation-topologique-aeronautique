@@ -191,3 +191,15 @@ body{font-family:Inter,"Segoe UI",system-ui,-apple-system,Arial,sans-serif;backg
 @media(max-width:1130px){.gap-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:820px){.process-lane{grid-template-columns:1fr}.process-lane-label{border-right:0;border-bottom:1px solid #e9eff1;padding:14px 18px}.process-lane-label strong{display:inline-block;margin-left:12px}.process-steps>div{padding:17px 13px}.process-improve{display:block}.process-improve span{display:block;margin-top:7px}}
 @media(max-width:560px){.gap-grid{grid-template-columns:1fr 1fr;gap:8px}.gap-card{padding:15px 13px}.gap-card strong{font-size:12px;min-height:52px}.process-heading{display:block}.process-heading>span{display:inline-block;margin-top:9px}.process-steps{grid-template-columns:1fr}.process-steps>div:not(:last-child):after{content:"↓";top:auto;bottom:-13px;left:10px;right:auto;transform:none}.process-improve{padding:15px}.process-steps>div{padding:13px 18px;border-bottom:1px dashed #e5edef}}
+
+
+/* Quatre volets du diagnostic qualité */
+.audit-methodology{background:#fff;border:1px solid #dce8ee;border-radius:14px;padding:20px 22px 22px;margin:0 0 20px;box-shadow:0 6px 20px #17354a09}
+.audit-methodology h2{font-size:18px!important;letter-spacing:-.03em;margin:8px 0 16px!important}
+.audit-stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.audit-stages>div{padding:15px 13px;border:1px solid #e0eaee;border-radius:10px;background:#f7fafb}
+.audit-stages span{font-size:10px;font-weight:860;color:#148b83;letter-spacing:.08em}
+.audit-stages b{display:block;font-size:12px;color:#25485b;margin:8px 0 4px}
+.audit-stages small{font-size:11px;color:#8195a0;line-height:1.5}
+@media(max-width:1050px){.audit-stages{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.audit-stages{grid-template-columns:1fr}}
