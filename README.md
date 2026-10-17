@@ -6,8 +6,8 @@
 
 **Reconception mécanique · Analyse structurale · Fabrication additive · Étude technico-économique**
 
-[![Démonstration](https://img.shields.io/badge/OUVRIR-LA%20DÉMO%20INTERACTIVE-087e87?style=for-the-badge)](https://elmokhtarrayadi21-creator.github.io/optimisation-topologique-aeronautique/)
-[![Portfolio](https://img.shields.io/badge/VOIR-LE%20PORTFOLIO-202f45?style=for-the-badge)](https://github.com/elmokhtarrayadi21-creator)
+[![Démonstration](https://img.shields.io/badge/OUVRIR-LA%20DÉMO%20INTERACTIVE-087e87?style=for-the-badge)](https://elmokhtarrayadi.github.io/optimisation-topologique-aeronautique/)
+[![Portfolio](https://img.shields.io/badge/VOIR-LE%20PORTFOLIO-202f45?style=for-the-badge)](https://github.com/elmokhtarrayadi)
 
 CATIA V5 · Altair Inspire · PolyNURBS · Ultimaker Cura
 
@@ -27,7 +27,7 @@ Ce projet porte sur la **reconception d'un composant mécanique associé aux por
 
 **Démarche.** Modélisation du volume initial, définition des surfaces protégées et des cas de charge, optimisation de la distribution de matière, reconstruction de la géométrie, contrôle mécanique puis estimation des coûts.
 
-**Livrable numérique.** Une [**application interactive accessible ici**](https://elmokhtarrayadi21-creator.github.io/optimisation-topologique-aeronautique/) qui permet de découvrir les étapes, les résultats, les essais Cura et un comparateur économique.
+**Livrable numérique.** Une [**application interactive accessible ici**](https://elmokhtarrayadi.github.io/optimisation-topologique-aeronautique/) qui permet de découvrir les étapes, les résultats, les essais Cura et un comparateur économique.
 
 ### Chiffres clés de l'étude
 
@@ -112,7 +112,7 @@ Les essais Cura présentés dans le rapport font varier **deux orientations (A/B
 
 ## Explorer la démonstration
 
-[**→ Ouvrir l’interface interactive**](https://elmokhtarrayadi21-creator.github.io/optimisation-topologique-aeronautique/)
+[**→ Ouvrir l’interface interactive**](https://elmokhtarrayadi.github.io/optimisation-topologique-aeronautique/)
 
 L’interface comprend notamment :
 - un aperçu du composant et de la démarche d’optimisation ;
@@ -146,6 +146,6 @@ Projet académique **réalisé en groupe**. Les noms des membres ne sont pas aff
 
 ### Découvrir le projet
 
-[**Application interactive**](https://elmokhtarrayadi21-creator.github.io/optimisation-topologique-aeronautique/) · [**Tous mes projets d’ingénierie**](https://github.com/elmokhtarrayadi21-creator)
+[**Application interactive**](https://elmokhtarrayadi.github.io/optimisation-topologique-aeronautique/) · [**Tous mes projets d’ingénierie**](https://github.com/elmokhtarrayadi)
 
 </div>
