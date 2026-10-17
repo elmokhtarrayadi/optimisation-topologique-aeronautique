@@ -1,28 +1,121 @@
-# Optimisation topologique d'un composant aéronautique
+<div align="center">
 
-Portfolio technique interactif présentant un projet académique réalisé en groupe : CAO, optimisation topologique, validation mécanique, fabrication additive et analyse technico-économique.
+![Bannière — Optimisation topologique aéronautique](assets/banner.svg)
 
-## Voir l'application
+# Optimisation topologique d’un composant aéronautique
 
-Le site se trouve dans `index.html`. Il fonctionne sans installation et peut être hébergé par GitHub Pages.
+**Reconception mécanique · Analyse structurale · Fabrication additive · Étude technico-économique**
 
-## Fonctionnalités
+[![Démonstration](https://img.shields.io/badge/OUVRIR-LA%20DÉMO%20INTERACTIVE-087e87?style=for-the-badge)](https://elmokhtarrayadi21-creator.github.io/optimisation-topologique-aeronautique/)
+[![Portfolio](https://img.shields.io/badge/VOIR-LE%20PORTFOLIO-202f45?style=for-the-badge)](https://github.com/elmokhtarrayadi21-creator)
 
-- Présentation de la démarche CATIA V5 / Altair Inspire.
-- Visualisations extraites des rapports du projet.
-- Visualiseur STL interactif (import local d'un modèle, non inclus).
-- Filtrage des essais d'impression 3D Cura.
-- Calculateur de coûts et graphiques interactifs.
-- Repérage des incohérences entre données et résultats des rapports.
+CATIA V5 · Altair Inspire · PolyNURBS · Ultimaker Cura
 
-## Publication avec GitHub Pages
+</div>
 
-GitHub → Settings → Pages → Build and deployment → Deploy from a branch → main → /(root) → Save.
+---
 
-## Limites techniques
+## Le projet en 30 secondes
 
-L'application constitue une présentation pédagogique et non un outil de validation structurale. Elle n'exécute pas de calcul par éléments finis. Certains résultats proviennent directement des rapports de groupe et sont signalés lorsqu'ils sont incohérents ou à vérifier. Le fichier CAO/STL natif n'est pas disponible.
+**Problématique.** Comment alléger un composant transmettant l’effort des vérins pneumatiques aux portes du train d’atterrissage, sans perdre ses interfaces fonctionnelles et en tenant compte de la fabrication additive ?
 
-## Attribution
+**Démarche.** Modélisation du volume initial, définition des surfaces protégées et des cas de charge, optimisation de la distribution de matière, reconstruction de la géométrie, contrôle mécanique puis estimation des coûts.
 
-Projet académique réalisé en groupe. Les noms des membres ne sont pas affichés sur le site à la demande du groupe. Vérifier les autorisations de partage des figures et des rapports avant toute diffusion.
+**Livrable numérique.** Une [**application interactive accessible ici**](https://elmokhtarrayadi21-creator.github.io/optimisation-topologique-aeronautique/) qui permet de découvrir les étapes, les résultats, les essais Cura et un comparateur économique.
+
+### Chiffres clés issus des rapports
+
+| Indicateur | Valeur |
+| :-- | --: |
+| Charge maximale étudiée | **2 300 N** |
+| Coefficient de sécurité **visé** | **1,25** |
+| Épaisseur minimale imposée | **7 mm** |
+| Masse de la pièce initiale | **55 g** |
+| Masse de la nouvelle pièce (valeur retenue dans l’étude économique) | **24 g** |
+| Allègement calculé à partir de ces masses | **56,4 %** |
+
+> **À lire avec prudence :** ces valeurs sont issues des documents de projet. La masse retenue dans le calcul économique diffère de certaines masses du plan d’expérience Cura. La satisfaction du critère de sécurité n’est pas démontrée ici par un fichier de résultats vérifiable.
+
+## Aperçu visuel
+
+![Capture de l'application interactive](https://raw.githubusercontent.com/elmokhtarrayadi21-creator/optimisation-topologique-aeronautique/main/assets/banner.svg)
+
+La bannière est une **illustration conceptuelle**, pas un modèle CAO. Pour consulter les figures CATIA et Inspire extraites des rapports et les outils interactifs, ouvrir la [démonstration](https://elmokhtarrayadi21-creator.github.io/optimisation-topologique-aeronautique/).
+
+## Démarche technique
+
+```mermaid
+flowchart LR
+    A["CAO initiale<br/>CATIA V5"] --> B["Zones fonctionnelles<br/>et espace de conception"]
+    B --> C["Charges et supports<br/>2 300 N"]
+    C --> D["Optimisation<br/>Altair Inspire"]
+    D --> E["Reconstruction<br/>PolyNURBS"]
+    E --> F["Contrôle mécanique"]
+    F --> G["Préparation FDM<br/>Cura"]
+    G --> H["Étude des coûts"]
+```
+
+| Phase | Travail présenté |
+| :-- | :-- |
+| **Conception** | Enveloppe géométrique, encombrement et prise en compte des deux vis et de la goupille |
+| **Préparation mécanique** | Définition des volumes protégés, des supports, du matériau CPE CFF et de la force appliquée |
+| **Optimisation** | Recherche d’une géométrie allégée sous contraintes |
+| **Reconstruction** | Lissage de la forme obtenue avec PolyNURBS |
+| **Vérification** | Nouvelle analyse mécanique à réaliser sur la forme reconstruite |
+| **Fabrication** | Orientation, hauteur de couche et vitesse d’impression étudiées avec Cura |
+| **Économie** | Comparaison entre pièce usinée et solution additive |
+
+## Étude de fabrication additive
+
+Les essais Cura présentés dans le rapport font varier **deux orientations (A/B)**, les **hauteurs de couche 0,10 / 0,15 / 0,20 mm** et les **vitesses 40 / 80 mm/s**. La démo permet de consulter les 12 configurations du plan d’expérience.
+
+## Comparaison économique — valeurs déclarées dans le rapport
+
+| Poste | Pièce initiale | Nouvelle pièce |
+| :-- | --: | --: |
+| Fabrication | 40 € | 156 € |
+| Matière | 40 € | 2,272 € |
+| Coût carburant théorique | 385 € | 168 € |
+| **Total indiqué dans le rapport** | **425 €** | **326,272 €** |
+
+**Point de contrôle :** le total indiqué pour la pièce initiale ne correspond pas à l’addition des trois postes (**40 + 40 + 385 = 465 €**). Il est donc nécessaire de clarifier la base de calcul avant toute conclusion définitive sur le gain économique. L’hypothèse de coût carburant est celle retenue dans l'étude, et non une économie mesurée en service.
+
+## Explorer la démonstration
+
+[**→ Ouvrir l’interface interactive**](https://elmokhtarrayadi21-creator.github.io/optimisation-topologique-aeronautique/)
+
+L’interface comprend notamment :
+- un aperçu du composant et de la démarche d’optimisation ;
+- des captures tirées des rapports de conception/simulation ;
+- un **visualiseur STL** permettant d’importer un modèle local (le fichier natif n’est pas disponible dans ce dépôt) ;
+- la comparaison des **12 scénarios Cura** ;
+- un **calculateur économique paramétrable** ;
+- des notes de vérification sur la cohérence des données.
+
+## Organisation du dépôt
+
+```text
+optimisation-topologique-aeronautique/
+├── index.html          # Application interactive autonome
+├── assets/
+│   └── banner.svg      # Bannière conceptuelle du projet
+└── README.md           # Documentation technique et accès à la démo
+```
+
+## Compétences illustrées
+
+**Conception mécanique** · **CAO CATIA V5** · **Optimisation topologique** · **Interprétation d'analyses mécaniques** · **Fabrication additive** · **Étude technico-économique** · **Valorisation web interactive**
+
+## Périmètre du projet
+
+Projet académique **réalisé en groupe**. Les noms des membres ne sont pas affichés. Les rapports n’ont pas été publiés intégralement dans le dépôt ; les illustrations issues du travail collectif doivent être diffusées avec les autorisations appropriées. Le code web présente les analyses et ne remplace ni une simulation éléments finis ni une validation industrielle. **Aucun fichier CATPart/STL réel n’a été fourni.**
+
+---
+
+<div align="center">
+
+### Découvrir le projet
+
+[**Application interactive**](https://elmokhtarrayadi21-creator.github.io/optimisation-topologique-aeronautique/) · [**Tous mes projets d’ingénierie**](https://github.com/elmokhtarrayadi21-creator)
+
+</div>
