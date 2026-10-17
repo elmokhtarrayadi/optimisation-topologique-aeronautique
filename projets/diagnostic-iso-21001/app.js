@@ -95,6 +95,11 @@ function showCauseFamily(id){
   $("ishActionLink").textContent=family.axis?"Voir les actions « "+family.axis+" » ↗":"Voir le plan d'amélioration ↗";
 }
 document.querySelectorAll("[data-ish-family]").forEach(btn=>btn.addEventListener("click",()=>showCauseFamily(btn.dataset.ishFamily)));
+// The technical diagram itself is also navigable by mouse and keyboard.
+document.querySelectorAll(".ish-branch[data-branch]").forEach(branch=>{
+  branch.addEventListener("click",()=>showCauseFamily(branch.dataset.branch));
+  branch.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();showCauseFamily(branch.dataset.branch)}});
+});
 $("ishActionLink").addEventListener("click",()=>{
   const axis=$("ishActionLink").dataset.axis;
   if([...$("actionAxis").options].some(opt=>opt.value===axis))$("actionAxis").value=axis;
