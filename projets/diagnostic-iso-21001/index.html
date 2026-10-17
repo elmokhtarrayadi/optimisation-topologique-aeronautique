@@ -13,106 +13,44 @@
 <div class="twocol"><article class="card pad"><h2>Taux par chapitre</h2><div id="chartResults" class="bars"></div><div class="note caution">Chapitre 9 : deux taux différents apparaissent dans l'étude (38 % et 54 %). La visualisation reprend 54 % ; la valeur doit être consolidée avant un usage officiel.</div></article><article class="card pad"><h2>Répartition des évaluations</h2><div class="donut"><b>71</b></div><div class="legend"><span><i style="color:#269e94">●</i> Satisfaisant</span><b>21</b></div><div class="legend"><span><i style="color:#8bc1bc">●</i> Partiellement conforme &gt; 50 %</span><b>25</b></div><div class="legend"><span><i style="color:#edb679">●</i> Partiellement conforme &lt; 50 %</span><b>22</b></div><div class="legend"><span><i style="color:#d76e69">●</i> Non conforme</span><b>03</b></div><div class="note">Répartition utilisée dans la grille de synthèse du diagnostic.</div></article></div></section>
 <section class="page" id="page-diagnostic"><div class="heading"><div class="eyebrow">03 / ÉVALUATION PAR EXIGENCE</div><h1>Explorer les chapitres ISO.</h1><p>Sélectionnez un chapitre pour afficher les critères de contrôle, les résultats et les actions de progrès.</p></div><div id="chapterList" class="chapter-grid"></div><div class="detail"><article class="card pad"><div class="eyebrow" id="chapterNumber">CHAPITRE 4</div><h2 id="chapterName"></h2><p id="chapterDesc" class="muted"></p><div class="progress"><span id="chapterProgress"></span></div><div class="row"><span class="muted">Taux de conformité</span><strong id="chapterValue"></strong></div><h3 style="margin-top:26px">Points de contrôle</h3><div class="checks" id="chapterCriteria"></div></article><article class="card pad"><div class="eyebrow">RECOMMANDATION OPÉRATIONNELLE</div><h2 id="chapterImprove"></h2><p class="muted" id="chapterGuide"></p><div class="note" id="chapterNote"></div><button class="btn soft" style="margin-top:22px" data-go="actions">Voir les actions ↗</button></article></div></section>
 <section class="page" id="page-ishikawa">
-  <div class="heading ish-heading">
-    <div class="eyebrow">04 / ANALYSE CAUSES–EFFETS · MÉTHODE 5M</div>
-    <h1>Comprendre les non-conformités.</h1>
-    <p>Le diagramme d'Ishikawa structure les facteurs pouvant freiner l'application de l'ISO 21001. Explorez les cinq familles de causes pour découvrir les dysfonctionnements envisagés et les leviers d'amélioration associés.</p>
-  </div>
-  <div class="ish-stats">
-    <div class="ish-stat"><span class="ish-stat-icon">◈</span><div><strong>5 familles</strong><small>Main-d'œuvre · Méthodes · Milieu · Matériel · Matière</small></div></div>
-    <div class="ish-stat"><span class="ish-stat-icon">≡</span><div><strong>15 facteurs identifiés</strong><small>Trois causes potentielles par famille</small></div></div>
-    <div class="ish-stat"><span class="ish-stat-icon">↗</span><div><strong>Amélioration continue</strong><small>Diagnostic → causes → actions → suivi</small></div></div>
-  </div>
-  <article class="card ish-board">
-    <div class="ish-board-top">
-      <div><div class="eyebrow">CARTOGRAPHIE CAUSES–EFFETS</div><h2>Diagramme d'Ishikawa</h2><p>Les branches représentent les cinq dimensions du système de management.</p></div>
-      <span class="ish-hint">Sélectionner une famille ci-dessous ↓</span>
-    </div>
-    <div class="ish-svg-wrap">
-      <svg class="ish-svg" viewBox="0 0 1120 540" role="img" aria-label="Diagramme d'Ishikawa 5M : cinq familles de causes convergent vers les difficultés de conformité ISO 21001">
-        <defs><linearGradient id="ishSpine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2daeb0"/><stop offset="1" stop-color="#207887"/></linearGradient>
-          <marker id="ishArrow" markerWidth="13" markerHeight="13" refX="9" refY="4" orient="auto"><path d="M0 0 L9 4 L0 8 Z" fill="#207887"/></marker></defs>
-        <path d="M60 275H850" fill="none" stroke="url(#ishSpine)" stroke-width="6" stroke-linecap="round" marker-end="url(#ishArrow)"/>
-        <g class="ish-branch active" data-branch="people">
-          <path d="M230 275L145 168" class="ish-rib"/>
-          <circle cx="230" cy="275" r="7" class="ish-joint"/>
-          <rect x="46" y="70" width="220" height="86" rx="12" class="ish-block"/>
-          <text x="156" y="100" class="ish-branch-number" text-anchor="middle">01 · FACTEUR HUMAIN</text>
-          <text x="156" y="128" class="ish-branch-label" text-anchor="middle">Main-d'œuvre</text>
-          <circle cx="145" cy="168" r="8" class="ish-end"/>
-        </g>
-        <g class="ish-branch" data-branch="methods">
-          <path d="M468 275L394 168" class="ish-rib"/>
-          <circle cx="468" cy="275" r="7" class="ish-joint"/>
-          <rect x="294" y="70" width="220" height="86" rx="12" class="ish-block"/>
-          <text x="404" y="100" class="ish-branch-number" text-anchor="middle">02 · ORGANISATION</text>
-          <text x="404" y="128" class="ish-branch-label" text-anchor="middle">Méthodes</text>
-          <circle cx="394" cy="168" r="8" class="ish-end"/>
-        </g>
-        <g class="ish-branch" data-branch="environment">
-          <path d="M708 275L652 168" class="ish-rib"/>
-          <circle cx="708" cy="275" r="7" class="ish-joint"/>
-          <rect x="542" y="70" width="220" height="86" rx="12" class="ish-block"/>
-          <text x="652" y="100" class="ish-branch-number" text-anchor="middle">03 · ENVIRONNEMENT</text>
-          <text x="652" y="128" class="ish-branch-label" text-anchor="middle">Milieu</text>
-          <circle cx="652" cy="168" r="8" class="ish-end"/>
-        </g>
-        <g class="ish-branch" data-branch="equipment">
-          <path d="M355 275L260 375" class="ish-rib"/>
-          <circle cx="355" cy="275" r="7" class="ish-joint"/>
-          <rect x="158" y="387" width="220" height="86" rx="12" class="ish-block"/>
-          <text x="268" y="417" class="ish-branch-number" text-anchor="middle">04 · RESSOURCES</text>
-          <text x="268" y="445" class="ish-branch-label" text-anchor="middle">Matériel</text>
-          <circle cx="260" cy="375" r="8" class="ish-end"/>
-        </g>
-        <g class="ish-branch" data-branch="materials">
-          <path d="M615 275L552 375" class="ish-rib"/>
-          <circle cx="615" cy="275" r="7" class="ish-joint"/>
-          <rect x="446" y="387" width="220" height="86" rx="12" class="ish-block"/>
-          <text x="556" y="417" class="ish-branch-number" text-anchor="middle">05 · INFORMATION</text>
-          <text x="556" y="445" class="ish-branch-label" text-anchor="middle">Matière</text>
-          <circle cx="552" cy="375" r="8" class="ish-end"/>
-        </g>
-        <g class="ish-effect"><rect x="870" y="198" width="231" height="153" rx="17"/><text x="986" y="232" text-anchor="middle" class="ish-effect-eyebrow">EFFET ANALYSÉ</text>
-          <text x="986" y="271" text-anchor="middle" class="ish-effect-heading">Difficultés</text>
-          <text x="986" y="296" text-anchor="middle" class="ish-effect-heading">de conformité</text>
-          <text x="986" y="327" text-anchor="middle" class="ish-effect-label">ISO 21001</text></g>
-        <text x="63" y="306" class="ish-spine-note">FACTEURS POTENTIELS</text>
-        <text x="63" y="338" class="ish-spine-sub">5 catégories → 1 problématique qualité</text>
-      </svg>
-    </div>
-    <div class="ish-tabs" id="ishFamilyTabs" role="group" aria-label="Sélectionner une famille de causes">
-      <button type="button" data-ish-family="people" class="ish-family-button active" aria-pressed="true"><span class="ish-button-number">01</span><span>Main-d'œuvre</span></button>
-      <button type="button" data-ish-family="methods" class="ish-family-button" aria-pressed="false"><span class="ish-button-number">02</span><span>Méthodes</span></button>
-      <button type="button" data-ish-family="environment" class="ish-family-button" aria-pressed="false"><span class="ish-button-number">03</span><span>Milieu</span></button>
-      <button type="button" data-ish-family="equipment" class="ish-family-button" aria-pressed="false"><span class="ish-button-number">04</span><span>Matériel</span></button>
-      <button type="button" data-ish-family="materials" class="ish-family-button" aria-pressed="false"><span class="ish-button-number">05</span><span>Matière</span></button>
-    </div>
-  </article>
-  <div class="ish-detail-grid">
-    <article class="card ish-cause-panel">
-      <div class="eyebrow">EXPLORER UNE FAMILLE</div>
-      <div class="ish-current-title"><div><h2 id="ishFamilyTitle">Main-d'œuvre</h2><p id="ishFamilyDesc">Ressources humaines et implication des acteurs</p></div><span id="ishCauseCount" class="ish-count">03 facteurs</span></div>
-      <div id="ishCauseDetails" class="ish-cause-list" aria-live="polite"></div>
-    </article>
-    <article class="card ish-action-panel">
-      <div class="eyebrow">PASSER DU DIAGNOSTIC À L'ACTION</div>
-      <h2 id="ishActionTitle">Renforcer les compétences</h2>
-      <p id="ishActionDesc" class="ish-action-desc"></p>
-      <div class="ish-action-info"><div><span>LEVIERS À METTRE EN PLACE</span><ul id="ishActionList"></ul></div></div>
-      <button class="btn soft" id="ishActionLink" type="button">Consulter les actions liées ↗</button>
-      <p class="ish-caveat">Les facteurs présentés sont des causes potentielles de non-conformité ; aucune contribution causale chiffrée n'est revendiquée.</p>
-    </article>
-  </div>
-  <div class="section">
-    <h2>Du constat à l'amélioration — méthode PDCA</h2>
-    <div class="ish-pdca">
-      <div class="ish-pdca-step"><span>PLAN</span><strong>Définir le problème</strong><small>Critères et priorités qualité</small></div>
-      <div class="ish-pdca-step"><span>DO</span><strong>Appliquer les actions</strong><small>Formation et formalisation</small></div>
-      <div class="ish-pdca-step"><span>CHECK</span><strong>Mesurer l'efficacité</strong><small>Indicateurs et audits</small></div>
-      <div class="ish-pdca-step"><span>ACT</span><strong>Standardiser</strong><small>Corrections et amélioration</small></div>
-    </div>
-  </div>
+<div class="heading"><div class="eyebrow">04 / ANALYSE DES NON-CONFORMITÉS</div><h1>Diagramme d'Ishikawa — 5M</h1>
+<p>Visualisation des facteurs pouvant affecter l'application du système de management ISO 21001. Les 15 causes sont organisées selon les cinq familles de la méthode 5M.</p></div>
+<article class="card fish-pro">
+<div class="fish-pro-toolbar"><div><strong>Analyse causes–effets</strong><span>Structure 5M · 15 facteurs</span></div><span class="fish-pro-tag">Sélectionnez une branche pour l'explorer</span></div>
+<div class="fish-diagram-scroll" tabindex="0" aria-label="Diagramme horizontal, faire défiler pour voir l'ensemble"><svg class="fish-diagram" viewBox="0 0 1540 690" role="img" aria-label="Diagramme d'Ishikawa détaillé, cinq grandes branches et quinze causes de non-conformité">
+<defs><marker id="fishArrow" markerWidth="13" markerHeight="13" refX="10" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#254d5b"/></marker></defs>
+<line x1="60" y1="350" x2="1307" y2="350" class="fish-spine" marker-end="url(#fishArrow)"/>
+<g class="ish-branch active" data-branch="people" tabindex="0" role="button" aria-label="Afficher les causes Main-d&apos;œuvre"><path class="fish-rib" d="M345 350L265 122"/><circle cx="345" cy="350" r="6.5" class="fish-node"/><g class="fish-cause"><path class="fish-twig" d="M293.1 202H578.1"/><text x="306.1" y="180" class="fish-cause-text"><tspan x="306.1" dy="0">Manque de sensibilisation</tspan><tspan x="306.1" dy="15">à la qualité</tspan></text></g><g class="fish-cause"><path class="fish-twig" d="M312.7 258H597.7"/><text x="325.7" y="236" class="fish-cause-text"><tspan x="325.7" dy="0">Formation insuffisante</tspan><tspan x="325.7" dy="15">du personnel</tspan></text></g><g class="fish-cause"><path class="fish-twig" d="M332.7 315H617.7"/><text x="345.7" y="293" class="fish-cause-text"><tspan x="345.7" dy="0">Faible implication des</tspan><tspan x="345.7" dy="15">acteurs pédagogiques</tspan></text></g><text x="250" y="62" class="fish-category-index">01 / CAUSES</text><text x="250" y="93" class="fish-category-name">Main-d&apos;œuvre</text></g>
+<g class="ish-branch" data-branch="methods" tabindex="0" role="button" aria-label="Afficher les causes Méthodes"><path class="fish-rib" d="M710 350L630 122"/><circle cx="710" cy="350" r="6.5" class="fish-node"/><g class="fish-cause"><path class="fish-twig" d="M658.1 202H943.1"/><text x="671.1" y="180" class="fish-cause-text"><tspan x="671.1" dy="0">Absence de procédures</tspan><tspan x="671.1" dy="15">formalisées</tspan></text></g><g class="fish-cause"><path class="fish-twig" d="M677.7 258H962.7"/><text x="690.7" y="236" class="fish-cause-text"><tspan x="690.7" dy="0">Manque d&apos;indicateurs</tspan><tspan x="690.7" dy="15">de performance</tspan></text></g><g class="fish-cause"><path class="fish-twig" d="M697.7 315H982.7"/><text x="710.7" y="293" class="fish-cause-text"><tspan x="710.7" dy="0">Suivi pédagogique</tspan><tspan x="710.7" dy="15">insuffisant</tspan></text></g><text x="615" y="62" class="fish-category-index">02 / CAUSES</text><text x="615" y="93" class="fish-category-name">Méthodes</text></g>
+<g class="ish-branch" data-branch="environment" tabindex="0" role="button" aria-label="Afficher les causes Milieu"><path class="fish-rib" d="M1075 350L995 122"/><circle cx="1075" cy="350" r="6.5" class="fish-node"/><g class="fish-cause"><path class="fish-twig" d="M1023.1 202H1308.1"/><text x="1036.1" y="180" class="fish-cause-text"><tspan x="1036.1" dy="0">Communication interne</tspan><tspan x="1036.1" dy="15">insuffisante</tspan></text></g><g class="fish-cause"><path class="fish-twig" d="M1042.7 258H1327.7"/><text x="1055.7" y="236" class="fish-cause-text"><tspan x="1055.7" dy="0">Environnement</tspan><tspan x="1055.7" dy="15">organisationnel complexe</tspan></text></g><g class="fish-cause"><path class="fish-twig" d="M1062.7 315H1347.7"/><text x="1075.7" y="293" class="fish-cause-text"><tspan x="1075.7" dy="0">Résistance au</tspan><tspan x="1075.7" dy="15">changement</tspan></text></g><text x="980" y="62" class="fish-category-index">03 / CAUSES</text><text x="980" y="93" class="fish-category-name">Milieu</text></g>
+<g class="ish-branch" data-branch="equipment" tabindex="0" role="button" aria-label="Afficher les causes Matériel"><path class="fish-rib" d="M490 350L395 585"/><circle cx="490" cy="350" r="6.5" class="fish-node"/><g class="fish-cause"><path class="fish-twig" d="M470.2 399H772.2"/><text x="483.2" y="418" class="fish-cause-text"><tspan x="483.2" dy="0">Équipements</tspan><tspan x="483.2" dy="15">pédagogiques limités</tspan></text></g><g class="fish-cause"><path class="fish-twig" d="M445.5 460H747.5"/><text x="458.5" y="479" class="fish-cause-text"><tspan x="458.5" dy="0">Insuffisance des outils</tspan><tspan x="458.5" dy="15">numériques</tspan></text></g><g class="fish-cause"><path class="fish-twig" d="M420.9 521H722.9"/><text x="433.9" y="540" class="fish-cause-text"><tspan x="433.9" dy="0">Ressources techniques</tspan><tspan x="433.9" dy="15">insuffisantes</tspan></text></g><text x="403" y="626" class="fish-category-index">04 / CAUSES</text><text x="403" y="657" class="fish-category-name">Matériel</text></g>
+<g class="ish-branch" data-branch="materials" tabindex="0" role="button" aria-label="Afficher les causes Matière"><path class="fish-rib" d="M935 350L840 585"/><circle cx="935" cy="350" r="6.5" class="fish-node"/><g class="fish-cause"><path class="fish-twig" d="M915.2 399H1217.2"/><text x="928.2" y="418" class="fish-cause-text"><tspan x="928.2" dy="0">Documentation incomplète</tspan></text></g><g class="fish-cause"><path class="fish-twig" d="M890.5 460H1192.5"/><text x="903.5" y="479" class="fish-cause-text"><tspan x="903.5" dy="0">Supports pédagogiques</tspan><tspan x="903.5" dy="15">non standardisés</tspan></text></g><g class="fish-cause"><path class="fish-twig" d="M865.9 521H1167.9"/><text x="878.9" y="540" class="fish-cause-text"><tspan x="878.9" dy="0">Manque de traçabilité</tspan><tspan x="878.9" dy="15">des informations</tspan></text></g><text x="848" y="626" class="fish-category-index">05 / CAUSES</text><text x="848" y="657" class="fish-category-name">Matière</text></g>
+<g class="fish-outcome"><rect x="1323" y="267" width="210" height="171" rx="11"/>
+<text x="1343" y="297" class="fish-outcome-top">PROBLÉMATIQUE</text>
+<text x="1343" y="329" class="fish-outcome-title">Difficultés</text>
+<text x="1343" y="355" class="fish-outcome-title">de conformité</text>
+<text x="1343" y="388" class="fish-outcome-sub">ISO 21001</text></g>
+<text x="64" y="378" class="fish-spine-label">CAUSES POTENTIELLES</text>
+</svg></div>
+<div class="fish-pro-foot"><span>MAIN-D'ŒUVRE · MÉTHODES · MILIEU · MATÉRIEL · MATIÈRE</span><span>Vue complète du système qualité</span></div>
+</article>
+<div class="fish-navigator"><div><h2>Analyse détaillée</h2><p>Choisissez une famille pour afficher ses causes et les actions associées.</p></div>
+<div class="fish-selector" id="ishFamilyTabs" role="group" aria-label="Famille de causes Ishikawa">
+<button type="button" class="ish-family-button active" data-ish-family="people" aria-pressed="true">Main-d&apos;œuvre</button><button type="button" class="ish-family-button" data-ish-family="methods" aria-pressed="false">Méthodes</button><button type="button" class="ish-family-button" data-ish-family="environment" aria-pressed="false">Milieu</button><button type="button" class="ish-family-button" data-ish-family="equipment" aria-pressed="false">Matériel</button><button type="button" class="ish-family-button" data-ish-family="materials" aria-pressed="false">Matière</button>
+</div></div>
+<div class="ish-detail-grid">
+<article class="card ish-cause-panel">
+<div class="eyebrow">FACTEURS IDENTIFIÉS</div>
+<div class="ish-current-title"><div><h2 id="ishFamilyTitle">Main-d'œuvre</h2><p id="ishFamilyDesc"></p></div><span id="ishCauseCount" class="ish-count">03 facteurs</span></div>
+<div id="ishCauseDetails" class="ish-cause-list" aria-live="polite"></div>
+</article>
+<article class="card ish-action-panel">
+<div class="eyebrow">PISTES D'AMÉLIORATION</div>
+<h2 id="ishActionTitle"></h2><p id="ishActionDesc" class="ish-action-desc"></p>
+<div class="ish-action-info"><span>ACTIONS PROPOSÉES</span><ul id="ishActionList"></ul></div>
+<button type="button" id="ishActionLink" class="btn soft">Consulter le plan d'action ↗</button>
+<p class="ish-caveat">Les causes représentées sont des hypothèses d'analyse. Leur contribution doit être confirmée par des vérifications adaptées.</p>
+</article></div>
 </section>
 <section class="page" id="page-actions"><div class="heading"><div class="eyebrow">05 / PLAN D'AMÉLIORATION</div><h1>Transformer les écarts en actions.</h1><p>Chaque action proposée est associée à un responsable, un délai prévisionnel et un indicateur de suivi. Les actions ne sont pas présentées comme réalisées.</p></div>
 <div class="kpis" style="margin-bottom:21px"><article class="card kpi"><small>Actions</small><strong>14</strong><p>Propositions structurées</p></article><article class="card kpi"><small>Prioritaires</small><strong>05</strong><p>Organisation du système qualité</p></article><article class="card kpi"><small>Durées prévues</small><strong>1–6</strong><p>Mois selon l'action</p></article><article class="card kpi"><small>Pilotage</small><strong style="font-size:29px">PDCA</strong><p>Amélioration continue</p></article></div>
