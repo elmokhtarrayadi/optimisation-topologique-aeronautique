@@ -23,7 +23,7 @@ CATIA V5 · Altair Inspire · PolyNURBS · Ultimaker Cura
 
 **Livrable numérique.** Une [**application interactive accessible ici**](https://elmokhtarrayadi21-creator.github.io/optimisation-topologique-aeronautique/) qui permet de découvrir les étapes, les résultats, les essais Cura et un comparateur économique.
 
-### Chiffres clés issus des rapports
+### Chiffres clés de l'étude
 
 | Indicateur | Valeur |
 | :-- | --: |
