@@ -38,8 +38,73 @@ $("chapterList").innerHTML=chapters.map(c=>'<button class="chapter-btn" data-cha
 function showChapter(id){const c=chapters.find(x=>x.id===id);if(!c)return;document.querySelectorAll("[data-chapter]").forEach(e=>e.classList.toggle("active",Number(e.dataset.chapter)===id));$("chapterNumber").textContent="CHAPITRE "+c.id;$("chapterName").textContent=c.full;$("chapterDesc").textContent=c.desc;$("chapterProgress").style.width=c.r+"%";$("chapterValue").textContent=c.r+" %";$("chapterCriteria").innerHTML=c.criteria.map(q=>'<div class="check">'+esc(q)+'</div>').join("");$("chapterImprove").textContent=c.action;$("chapterGuide").textContent=c.guide;$("chapterNote").textContent=c.note;}
 document.querySelectorAll("[data-chapter]").forEach(e=>e.addEventListener("click",()=>showChapter(Number(e.dataset.chapter))));
 showChapter(4);
-const causes=[["Main-d'œuvre","Sensibilisation et formation"],["Méthodes","Procédures et indicateurs"],["Milieu","Communication interne"],["Matériel","Ressources et outils numériques"],["Matière","Gestion documentaire"]];
-$("causeCards").innerHTML=causes.map(c=>'<article class="card step"><b>'+esc(c[0])+'</b><p>'+esc(c[1])+'</p></article>').join("");
+
+const causeFamilies = [
+  {id:"people",name:"Main-d'œuvre",description:"Compétences, sensibilisation et implication des acteurs de l'établissement.",
+    factors:[
+      {name:"Manque de sensibilisation à la qualité",detail:"Les exigences qualité et leur intérêt opérationnel ne sont pas suffisamment partagés."},
+      {name:"Formation insuffisante du personnel",detail:"La mise à niveau des compétences nécessaires au système de management reste limitée."},
+      {name:"Faible implication des acteurs pédagogiques",detail:"L'adhésion des intervenants aux pratiques d'amélioration peut être insuffisante."}
+    ],title:"Développer les compétences et l'implication",descriptionAction:"Le diagnostic met en évidence le besoin de renforcer la sensibilisation à la qualité et la formation des équipes.",
+    levers:["Organiser des sessions de formation et de sensibilisation (3 mois prévus)","Élaborer un plan annuel de formation du personnel (4 mois prévus)","Suivre le nombre de formations réalisées et les heures de formation"],axis:"Support"},
+  {id:"methods",name:"Méthodes",description:"Règles de fonctionnement, pilotage des processus et évaluation des performances.",
+    factors:[
+      {name:"Absence de procédures formalisées",detail:"Les pratiques ne sont pas systématiquement décrites et structurées dans des procédures."},
+      {name:"Manque d'indicateurs de performance",detail:"Les résultats des processus ne sont pas suivis avec des mesures suffisantes."},
+      {name:"Suivi pédagogique insuffisant",detail:"Les activités de formation et leurs performances nécessitent un suivi plus régulier."}
+    ],title:"Formaliser et mesurer les processus",descriptionAction:"Structurer le pilotage pour relier objectifs, indicateurs de performance et décisions d'amélioration.",
+    levers:["Définir des objectifs SMART assortis de KPI (2 mois prévus)","Créer un tableau de bord qualité (3 mois prévus)","Planifier des audits internes périodiques (6 mois prévus)"],axis:"Évaluation"},
+  {id:"environment",name:"Milieu",description:"Communication, environnement organisationnel et capacité à accompagner les évolutions.",
+    factors:[
+      {name:"Communication interne insuffisante",detail:"La circulation des informations qualité entre les services et les acteurs peut être limitée."},
+      {name:"Environnement organisationnel complexe",detail:"La répartition des rôles et les interactions entre services peuvent compliquer les démarches qualité."},
+      {name:"Résistance au changement",detail:"Les évolutions de procédure et d'organisation peuvent rencontrer des réticences."}
+    ],title:"Clarifier la gouvernance et la communication",descriptionAction:"Renforcer l'engagement de la direction et mieux définir les responsabilités et les orientations qualité.",
+    levers:["Élaborer et communiquer une politique qualité (1 mois prévu)","Désigner un responsable qualité ISO 21001 (1 mois prévu)","Associer les acteurs concernés au déploiement des actions"],axis:"Leadership"},
+  {id:"equipment",name:"Matériel",description:"Ressources physiques, moyens techniques et environnement numérique de travail.",
+    factors:[
+      {name:"Équipements pédagogiques limités",detail:"Le niveau des équipements peut restreindre la qualité ou la diversité des activités pédagogiques."},
+      {name:"Insuffisance des outils numériques",detail:"Les outils informatiques nécessaires au suivi et à la coordination ne sont pas toujours adaptés."},
+      {name:"Ressources techniques insuffisantes",detail:"La disponibilité des moyens de fonctionnement doit être évaluée selon les besoins réels."}
+    ],title:"Évaluer les besoins en équipements",descriptionAction:"Avant de proposer un investissement, préciser les moyens manquants, leur utilisation et les priorités fonctionnelles.",
+    levers:["Dresser un état des lieux du matériel et des outils numériques","Hiérarchiser les besoins d'investissement selon leur criticité","Définir des indicateurs d'utilisation et de disponibilité"],axis:null},
+  {id:"materials",name:"Matière",description:"Information documentaire, supports pédagogiques et traçabilité des données.",
+    factors:[
+      {name:"Documentation incomplète",detail:"Certaines instructions et informations ne sont pas suffisamment formalisées."},
+      {name:"Supports pédagogiques non standardisés",detail:"Les pratiques documentaires peuvent différer selon les services ou activités."},
+      {name:"Manque de traçabilité des informations",detail:"Les versions, décisions et enregistrements ne sont pas systématiquement maîtrisés."}
+    ],title:"Maîtriser l'information documentée",descriptionAction:"Renforcer la disponibilité de documents cohérents, à jour et traçables dans les processus.",
+    levers:["Mettre en place une procédure de maîtrise documentaire (2 mois prévus)","Clarifier les responsabilités de mise à jour et de diffusion","Suivre le nombre de documents maîtrisés"],axis:"Support"}
+];
+function showCauseFamily(id){
+  const family = causeFamilies.find(f=>f.id===id);if(!family)return;
+  document.querySelectorAll("[data-ish-family]").forEach(btn=>{
+    const active=btn.dataset.ishFamily===id;
+    btn.classList.toggle("active",active);btn.setAttribute("aria-pressed",String(active));
+  });
+  document.querySelectorAll(".ish-branch").forEach(branch=>branch.classList.toggle("active",branch.dataset.branch===id));
+  $("ishFamilyTitle").textContent=family.name;
+  $("ishFamilyDesc").textContent=family.description;
+  $("ishCauseCount").textContent=String(family.factors.length).padStart(2,"0")+" facteurs";
+  $("ishCauseDetails").innerHTML=family.factors.map((f,i)=>
+    '<article class="ish-factor"><span class="ish-factor-num">'+String(i+1).padStart(2,"0")+'</span><div><strong>'+esc(f.name)+'</strong><p>'+esc(f.detail)+'</p></div></article>').join("");
+  $("ishActionTitle").textContent=family.title;
+  $("ishActionDesc").textContent=family.descriptionAction;
+  $("ishActionList").innerHTML=family.levers.map(t=>'<li>'+esc(t)+'</li>').join("");
+  $("ishActionLink").dataset.axis=family.axis||"all";
+  $("ishActionLink").textContent=family.axis?"Voir les actions « "+family.axis+" » ↗":"Voir le plan d'amélioration ↗";
+}
+document.querySelectorAll("[data-ish-family]").forEach(btn=>btn.addEventListener("click",()=>showCauseFamily(btn.dataset.ishFamily)));
+$("ishActionLink").addEventListener("click",()=>{
+  const axis=$("ishActionLink").dataset.axis;
+  if([...$("actionAxis").options].some(opt=>opt.value===axis))$("actionAxis").value=axis;
+  else $("actionAxis").value="all";
+  $("actionPriority").value="all";
+  $("actionSearch").value="";
+  renderActions();
+  route("actions");
+});
+showCauseFamily("people");
 $("actionAxis").innerHTML+=Array.from(new Set(actions.map(a=>a.a))).map(a=>'<option value="'+esc(a)+'">'+esc(a)+'</option>').join("");
 let filtered=[];
 function renderActions(){const term=$("actionSearch").value.toLocaleLowerCase("fr").trim(),prio=$("actionPriority").value,axis=$("actionAxis").value;filtered=actions.filter(a=>(prio==="all"||(prio==="yes"?a.p:!a.p))&&(axis==="all"||a.a===axis)&&[a.t,a.a,a.o,a.k].some(v=>v.toLocaleLowerCase("fr").includes(term)));$("actionRows").innerHTML=filtered.map(a=>'<tr><td>'+esc(a.t)+'</td><td>'+esc(a.a)+'</td><td>'+esc(a.o)+'</td><td>'+a.d+' mois</td><td>'+esc(a.k)+'</td><td><span class="label'+(a.p?" priority":"")+'">'+(a.p?"Prioritaire":"Proposée")+'</span></td></tr>').join("")||'<tr><td colspan="6">Aucune action trouvée.</td></tr>';$("actionCount").textContent=filtered.length+" action(s) affichée(s)";}
