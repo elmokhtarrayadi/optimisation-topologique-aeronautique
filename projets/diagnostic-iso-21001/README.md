@@ -35,9 +35,30 @@ Structurer un diagnostic de conformité ISO 21001 afin d'identifier les écarts 
 
 ## Fonctionnalités de l'application
 
-**Vue d'ensemble** pour lire la démarche et les principaux indicateurs. **Résultats qualité** avec graphiques et distribution des évaluations. **Diagnostic ISO** interactif, chapitre par chapitre. **Ishikawa 5M** pour explorer les causes. **Plan d'amélioration** consultable avec filtres et export CSV. **Simulation** pour comparer des scénarios théoriques.
+L'interface présente une expérience structurée en six espaces :
 
-La simulation est illustrative et ne remplace pas un audit réel.
+- **Vue d'ensemble :** indicateurs clés et méthodologie du diagnostic.
+- **Résultats qualité :** graphiques de conformité et répartition des évaluations.
+- **Diagnostic ISO :** consultation détaillée des chapitres 4 à 10.
+- **Ishikawa 5M interactif :** un diagramme causes-effets avec **5 familles et 15 facteurs potentiels**. Chaque sélection affiche les causes, leur interprétation et les leviers d'amélioration associés. Les actions pertinentes sont reliées au plan d'amélioration.
+- **Plan d'amélioration :** 14 actions consultables par axe et priorité, avec délais, responsables, KPI et export CSV.
+- **Simulation :** comparaison de scénarios théoriques, distincts des évaluations réellement observées.
+
+### Analyse des causes — méthode Ishikawa
+
+Le diagnostic présente cinq familles de causes potentielles :
+
+| Famille 5M | Principaux facteurs examinés |
+| :-- | :-- |
+| Main-d'œuvre | Sensibilisation ; formation ; implication pédagogique |
+| Méthodes | Procédures ; indicateurs ; suivi |
+| Milieu | Communication ; complexité organisationnelle ; résistance au changement |
+| Matériel | Équipements ; outils numériques ; ressources techniques |
+| Matière | Documentation ; standardisation des supports ; traçabilité |
+
+Ces facteurs sont des hypothèses d'analyse structurées par la méthode 5M, **pas des causes racines démontrées statistiquement**. Le diagramme est relié à une démarche PDCA et au plan d'action prévisionnel.
+
+La démonstration interactive est réalisée pour rendre le diagnostic plus lisible ; elle ne remplace pas un audit réel ni une décision de certification.
 
 ## Structure
 
